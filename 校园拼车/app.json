@@ -1,15 +1,19 @@
 {
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
   "pages": [
-    "pages/main-page/main-page",
     "pages/lobby-page/lobby-page",
+    "pages/main-page/main-page",
     "pages/room-page/room-page",
     "pages/personal-page/personal-page"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#00ff00",
+    "navigationBarTitleText": "校e拼",
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

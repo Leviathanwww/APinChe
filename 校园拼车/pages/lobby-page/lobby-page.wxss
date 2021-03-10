@@ -1,1 +1,90 @@
-/* pages/lobby-page/lobby-page.wxss */
+/* 创建房间和我的房间 */
+.headContainer{
+  display: flex;
+  margin-top: 10rpx;
+}
+.headContainer .icon-Item{
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  margin: 10rpx 10rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headContainer .icon-Item .iconfont{
+  height: 100rpx;
+  width: 100rpx;
+  background-color: rgba(119, 0, 255, 0.596);
+  border-radius: 50%;
+  text-align: center;
+}
+.headContainer .location{
+  margin: 20rpx 20rpx;
+  font-weight: bolder;
+}
+/*   房间查找  */
+.roomFrame .roomItem{
+  background-color: aliceblue;
+  border: 1rpx #333 solid;
+  border-radius: 10rpx;
+  margin: 0 20rpx;
+  margin-top: 30rpx;
+}
+.roomFrame .roomItem .info{
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.roomFrame .roomItem .nickName{
+  width: 20%;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin: auto;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.roomFrame .roomItem .label{
+  width: 45%;
+  font-size: 26rpx;
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: auto;
+}
+.roomFrame .roomItem .label text{
+  background-color: #fff;
+}
+.roomFrame .roomItem .position{
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 20rpx;
+  color: red;
+}
+.roomFrame .roomItem .owner{
+  font-size: 26rpx;
+  width: 26%;
+  margin-left: 10rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.roomFrame .roomItem .number{
+  font-size: 30rpx;
+  margin-left: auto;
+  margin-right: 20rpx;
+}
+.roomFrame .roomItem .time{
+  text-align: right;
+  margin-left: auto;
+  margin-right: 20rpx;
+}
+/* 聊天框 */
+.chatBox{
+  position: absolute;
+  bottom: 0;
+}
