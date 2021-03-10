@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/main-page/main-page",
+    "pages/lobby-page/lobby-page",
+    "pages/room-page/room-page",
+    "pages/personal-page/personal-page"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
