@@ -1,0 +1,26 @@
+服务器传入的数据{
+    变量名                 变量类型        说明    
+    destinationArray       数组           可供选择的目的地
+    personalInfo           对象           个人信息
+}
+提交到服务器的数据{
+    变量名            变量类型        说明 
+    room              对象           车队房间
+    {
+    location          字符串         始发地
+    data              字符串         发车日期，"2020-01-01"的形式 
+    time              字符串         发车时间，"00:00"
+    order             字符串         打车方式，此字符串型只有'false'（实时）和'true'（预约）两个值，建议转换为布尔型存入数据库
+    limite            字符串         性别限制，此字符串型只有'false'（无）和'true'（有）两个值，建议转换为布尔型存入数据库
+    teamNickName      字符串         房间昵称，不超过15个字符
+    teamLabel         字符串         房间个性签名，不超过20个字符
+
+    member            数组           房间成员，含有一个对象[{
+        id              数字            成员id，unique
+        avatarUrl       字符串          成员头像路径
+        nickName        字符串          成员昵称
+        isHost          布尔            是否为房主，true：是，false：不是
+    }]
+
+    }
+}

@@ -2,12 +2,12 @@
 
 参数名      说明
 location    返回定位的位置
-room        这是一个数组，返回房间信息{
-        id    房间号，唯一不可重复
-        label   房间说明，房间标签
-        nickName    房间昵称
-        owner   房主昵称
-        departureTime   发车时间
-        destination   目的地
-        number    当前房间人数
-}
+room        这是一个数组，包含房间对象{
+                                        id    房间号，唯一不可重复
+                                        label   房间说明，房间标签
+                                        nickName    房间昵称
+                                        owner   房主昵称
+                                        departureTime   发车时间
+                                        destination   目的地
+                                        number    当前房间人数
+                                }

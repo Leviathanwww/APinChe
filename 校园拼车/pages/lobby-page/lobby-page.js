@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    location:"阳澄湖",
+    location:"苏大阳澄湖校区",
     room:[{
         id:0,
         label:"快上车",
@@ -16,15 +16,100 @@ Page({
         number: 2,
       },
       {
-        id: 42443242,
+        id: 1,
         nickName:"一路向北向向向123",
         label:"快上车车打车打车打车打车打",
         owner:"方子焱",
         departureTime:"00:00",
         destination:"本部",
         number: 1,
+      },
+      {
+        id: 2,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 1,
+      },
+      {
+        id: 3,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 1,
+      },
+      {
+        id: 4,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 1,
+      },
+      {
+        id: 5,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 1,
+      },{
+        id: 6,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 1,
+      },{
+        id: 7,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 1,
+      },
+      {
+        id: 8,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 1,
+      },
+      {
+        id: 9,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 1,
+      },
+      {
+        id: 10,
+        nickName:"一路向北向向向123",
+        label:"快上车车打车打车打车打车打",
+        owner:"方子焱",
+        departureTime:"00:00",
+        destination:"本部",
+        number: 4,
       }
     ]
+  },
+
+  toNewRoom: function(){
+    wx.navigateTo({
+      url: '/pages/newRoom-page/newRoom-page?locationData=' + this.data.location,
+    })
   },
 
   /**

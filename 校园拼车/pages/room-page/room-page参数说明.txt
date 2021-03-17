@@ -1,0 +1,25 @@
+服务器传入的数据{
+    变量名                 变量类型          说明  
+    id                     数字               房间id，unique
+    personalInfo           对象            个人信息{
+      id                    数字            个人id，unique
+      nickName              字符串          个人昵称
+      avatarUrl             字符串          头像地址
+    }
+    isMember              布尔              是否为当前房间车队成员
+    isHost                布尔              是否为当前房间房主
+}
+提交到服务器的数据{
+    变量名                变量类型           说明 
+    room                  对象              房间数组{
+      id                  数字              房间id
+      teamNickName        字符串            房间昵称
+      teamLabel           字符串            房间标签
+      isBlock             布尔              该房间是否被禁止加入，true:是，false：否
+      member              对象数组              车队成员{
+        id                    数字              成员id
+        isHost                布尔              是否为当前房间房主
+      }
+    }
+    
+}

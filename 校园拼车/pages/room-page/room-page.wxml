@@ -1,2 +1,61 @@
-<!--pages/room-page/room-page.wxml-->
-<text>pages/room-page/room-page.wxml</text>
+<view class="myTeamContainer">
+  <!-- 地图设置信息板块 -->
+  <view class="topContainer">
+    <view class="map">
+      <map name=""></map>
+    </view>
+    <view class="setting">
+      <view class="settingItem">
+        <text>始发地：</text>
+        <text>{{location}}</text>
+      </view>
+      <view class="settingItem">
+        <text>目的地：</text>
+        <text>{{destination}}</text>
+      </view>
+      <view class="settingItem">
+        <text>预计个人费用：</text>
+        <text>{{cost/member.length}}</text>
+      </view>
+      <view class="settingItem">
+        <view wx:if="{{order === 'true'}}">
+          <text>发车时间：</text>
+          <text decode="true">&nbsp;{{date}}&nbsp;&nbsp;</text>
+          <text>{{time}}</text>
+        </view>
+        <view wx:if="{{order == 'false'}}">
+          <text>这是一个实时房间</text>
+        </view>
+      </view>
+      <view class="settingItem" wx:if="{{genderLimite == 'true'}}">
+        <text>性别限制：</text>
+        <text wx:if="{{userInfo.gender == 1}}">男</text>
+        <text wx:if="{{userInfo.gender == 0}}">女</text>
+      </view>
+    </view>
+  </view>
+  <!-- 车队成员板块 -->
+  <view class="memberContainer">
+    <view class="headline">
+      <text>车队成员</text>
+    </view>
+    <view bindtap="changeBlock" wx:if="{{personalInfo.isHost}}">
+      <text>🔒</text>
+    </view>
+    <view class="member">
+      <view class="memberItem" wx:for="{{member}}" wx:key="id" bindtap="lookInfo" >
+        <image src="{{item.avatarUrl}}"></image>
+        <text>{{item.nickName}}</text>
+      </view>
+      <view class="memberItem" wx:for="{{memberMax - member.length}}" wx:key="index" bindtap="addMember" wx:if="{{!isBlock}}">
+          <mp-icon icon="add2" size="{{60}}" ></mp-icon>
+      </view>
+    </view>
+  </view>
+  <view class="exitRoom" wx:if="{{isMember}}">
+    <button size="mini" bindtap="exitRoom" >退出车队</button>
+  </view>
+  <!-- 聊天板块 -->
+  <view class="chatContainer">
+  </view>
+</view>

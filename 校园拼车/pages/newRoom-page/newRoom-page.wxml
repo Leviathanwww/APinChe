@@ -1,0 +1,76 @@
+<view class="newRoomContainer">
+  <view class="settingContainer">
+    <!-- 始发地 -->
+    <view class="location-box">
+          <text>始发地：   {{location}}</text>
+    </view>
+    <!-- 目的地 -->
+    <view class="destination-box">
+      <text>目的地：</text>
+      <picker bindchange="bindPickerChange" range="{{destinationArray}}" >
+        <view class="location-select">
+          <text decode="true">&nbsp;{{destinationArray[index]}}&nbsp;</text>
+        </view>
+      </picker>
+    </view>
+    <!-- 打车方式 -->
+    <view class="ways-box">
+      <radio-group bindchange="bindRadioChange" >
+        <text>打车方式：</text>
+        <radio  checked="{{item.checked}}" wx:key="order1" wx:for="{{orderItem}}" value="{{item.order1}}">
+            <text decode="true">{{item.value}}&nbsp;</text>
+        </radio>
+      </radio-group>
+      <view class="time-date-box">
+        <view class="time-dateItem" wx:if="{{order == 'true'}}" >
+          <text>出发日期：</text>
+          <picker mode="date" value="{{date}}" bindchange="bindDateChange" >
+            <view class="picker">
+              <text>{{date}}</text>
+            </view>
+          </picker>
+        </view>
+        <view class="time-dateItem" wx:if="{{order == 'true'}}">
+          <text>出发时间：</text>
+          <picker mode="time" value="{{time}}" bindchange="bindTimeChange" >
+            <view class="picker">
+              <text>{{time}}</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <!-- 性别限制 -->
+    <view class="gender-box">
+      <text>性别限制：</text>
+      <view class="genderlimite" >
+      <radio-group bindchange="genderChange" >
+        <radio wx:for="{{genderLimite}}" wx:key="limite1" value="{{item.limite1}}" checked="{{item.checked}}">
+          <text decode="true">{{item.value}}&nbsp;</text>
+        </radio>
+      </radio-group>
+      </view> 
+      <view class="genderText" wx:if="{{limite == 'true'}}">
+        <text wx:if="{{userInfo.gender == 1}}">（只限男性）</text>
+        <text wx:if="{{userInfo.gender == 0}}">（只限女性）</text>
+      </view>
+    </view>
+    <!-- 车队昵称 -->
+    <view class="settingItem">
+      <text>车队昵称：</text>
+      <view class="input">
+        <input type="text" value="" placeholder="一路向北" confirm-type="完成" maxlength="15" bindblur="inputBack" />
+      </view>
+    </view>
+    <!-- 车队标签 -->
+    <view class="settingItem">
+      <text>车队标签：</text>
+      <view class="input">
+        <input type="text" value="" placeholder="速度上车！！！！" confirm-type="完成" maxlength="20" bindblur="labelInputBack" />
+      </view>
+    </view>
+  </view>
+  <view class="button-box">
+    <button size="" open-type="getUserInfo" bindtap="toRoom" type="primary" >创建房间</button>
+  </view>
+</view>

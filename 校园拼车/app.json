@@ -5,8 +5,10 @@
   },
   "pages": [
     "pages/lobby-page/lobby-page",
-    "pages/main-page/main-page",
     "pages/room-page/room-page",
+    "pages/newRoom-page/newRoom-page",
+    
+    "pages/main-page/main-page",
     "pages/personal-page/personal-page"
   ],
   "window": {

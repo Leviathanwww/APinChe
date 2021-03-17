@@ -1,0 +1,46 @@
+.settingContainer{
+  margin: 0 30rpx;
+}
+.settingContainer .location-box{
+  margin-top: 20rpx;
+}
+.settingContainer .destination-box{
+  display: flex;
+  margin-top: 20rpx;
+}
+.settingContainer .destination-box .location-select{
+  background-color: aliceblue;
+  border: #aaaaaa 1rpx solid;
+  border-radius: 10rpx;
+}
+.settingContainer .ways-box{
+  margin-top: 26rpx;
+}
+.settingContainer .ways-box .time-date-box{
+  margin-top: 26rpx;
+}
+.settingContainer .ways-box .time-dateItem{
+  display: flex;
+  margin-top: 10rpx;
+}
+.settingContainer .ways-box .time-dateItem .picker{
+  background-color: aliceblue;
+  border: #aaaaaa 1rpx solid;
+  border-radius: 10rpx;
+}
+.settingContainer .gender-box{
+  margin-top: 26rpx;
+  display: flex;
+}
+.settingContainer .settingItem{
+  display: flex;
+  margin-top: 30rpx;
+}
+.settingContainer .settingItem .input{
+  border-bottom: #aaaaaa 1rpx solid;
+}
+.button-box{
+  width: 100%;
+  position: absolute;
+  bottom: 200rpx;
+}

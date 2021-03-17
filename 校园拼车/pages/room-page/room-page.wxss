@@ -1,1 +1,65 @@
-/* pages/room-page/room-page.wxss */
+/* 地图设置信息板块 */
+.topContainer .map map{
+  width: 100%;
+}
+.topContainer .setting{
+  margin: 20rpx 30rpx;
+}
+.topContainer .setting .settingItem{
+  display: flex;
+  text-align: left;
+  height: 33.33%;
+  line-height: 60rpx;
+}
+/* 车队成员板块 */
+.memberContainer .headline{
+  font-size: 30rpx;
+  width: 120rpx;
+  position: relative;
+  top: 38rpx;
+  left: 40rpx;
+  background-color: tomato;
+  border-radius: 10rpx;
+}
+.memberContainer .member{
+  display: flex;
+  padding: 26rpx 0;
+  margin:  20rpx 16rpx;
+  border: 1rpx solid #333;
+  border-radius: 20rpx;
+}
+.memberContainer .member .memberItem{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  line-height: 50rpx;
+}
+.memberContainer .member .memberItem image{
+  height: 100rpx;
+  width: 100rpx;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+}
+
+.memberContainer .member .memberItem mp-icon{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+}
+.memberContainer .member .memberItem .microphone{
+  margin-top: 10rpx;
+  width: 80rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+.memberContainer .member .memberItem .microphone image{
+  height: 34rpx;
+  width: 34rpx;
+  float: left;
+}
